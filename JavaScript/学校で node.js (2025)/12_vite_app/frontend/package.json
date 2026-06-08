@@ -1,0 +1,14 @@
+{
+  "name": "frontend",
+  "private": true,
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "vite-hono-student-app": "file:.."
+  }
+}
