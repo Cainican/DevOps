@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <h1>filter</h1>
+    {# https://jinja.palletsprojects.com/en/stable/templates/#builtin-filters #}
+
+    <p>{{ 'aBc' | upper }}</p>
+    <p>{{ 'aBc' | lower }}</p>
+    <p>{{ 'aBc' | capitalize }}</p>
+    <p>{{ 123 | abs }}</p>
+    <p>{{ -123 | abs }}</p>
+    <p>{{ address | default('既定値') }}</p>
+    <p>{{ age | default('既定値') }}</p>
+    <p>{{ 'abcd' | replace('bc', 'xxx') }}</p>
+    <p>{{ '<h1>a</h1>' | safe }}</p>
+    <p>{{ colors | first }}</p>
+    <p>{{ colors | last }}</p>
+    <p>{{ colors | join }}</p>
+    <p>{{ colors | join ('-') }}</p>
+    <p>{{ colors | length }}</p>
+    <p>{{ colors | random }}</p>
+    <p>{{ colors | sort }}</p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>データ受け渡し</h1>
+  {#
+    {%  %}
+    でくくって、制御構造
+  #}
+
+  {% if 18 <= age %}
+  <p>成年</p>
+  {% else %}
+    <p>未成年</p>
+  {% endif %} {# 終端の endXX が必須 #}
+
+  <ul>
+    {% for en, jp in colors_dic.items() %}
+    <li>{{ en }}: {{ jp }}</li>
+    {% endfor %}
+  </ul>
+
+  {# forの中であれば繰り返し回数が「loop.index」にて取得可能 #}
+
+    <ul>
+    {% for color in colors %}
+    <li>{{ loop.index }}{{ color }}</li>
+    {% endfor %}
+  </ul>
+
+  <table>
+    {% for user in users %}
+    <tr>
+      <th>{{ user.id }}</th>
+      <th>{{ user.name }}</th>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

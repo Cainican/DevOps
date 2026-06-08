@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>その他</h1>
+  <p>
+    ページ内で有効な変数を
+    定義することができる。
+    ❈積極的にやることではない。
+  </p>
+  {% set count = 1 %}
+  <p>{{ count }}</p>
+
+  <p>スコープ(有効範囲)を
+    決めて変数を使うこともできる。
+  </p>
+  {% with i = 1 %}
+  <p>{{ i }}</p>
+  {%- endwith -%}
+  <p>
+    {{- i -}}
+  </p>
+
+  <p>余分な空白文字を除去する。</p>
+  <div>
+    {#- 手前空白文字除去 #}AAA
+  </div>
+    <div>
+    AAA{# 後方空白文字除去 -#}
+  </div>
+    <div>
+    {#- 両サイド空白文字除去 -#}
+  </div>
+</body>
+</html>
